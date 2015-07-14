@@ -28,7 +28,7 @@ public class puntuaciones extends Activity implements AdapterView.OnItemSelected
     Spinner spinnerEdificio;
     Spinner spinnerColor;
     Spinner spinnerScore;
-    boolean listo = false, defaults=false;
+    boolean listo = false, defaults=false, error=false;
     int punct;
     String edificio, color, estacion, score, equipo;
     String edificioDefault,colorDefault,scoreDefault;
@@ -51,7 +51,7 @@ public class puntuaciones extends Activity implements AdapterView.OnItemSelected
         spinnerScore = (Spinner)findViewById(R.id.spinnerScore);
 
 
-        ArrayAdapter adapterScore =ArrayAdapter.createFromResource(this,R.array.Score,android.R.layout.simple_spinner_item);
+        ArrayAdapter adapterScore =ArrayAdapter.createFromResource(this, R.array.Score, android.R.layout.simple_spinner_item);
         spinnerScore.setAdapter(adapterScore);
         spinnerScore.setOnItemSelectedListener(this);
 
@@ -64,7 +64,7 @@ public class puntuaciones extends Activity implements AdapterView.OnItemSelected
         colorDefault = adapterColor.getItem(0).toString();
         scoreDefault = adapterScore.getItem(0).toString();
     }
-    public void onClickSubmit(View v){
+    public void onClickSubmit(View v) {
         Button button = (Button) v;
         ParseUser currentUser = ParseUser.getCurrentUser();
         if (currentUser != null) {
@@ -76,49 +76,55 @@ public class puntuaciones extends Activity implements AdapterView.OnItemSelected
         }
         //Toast.makeText(this, estacion, Toast.LENGTH_SHORT).show();
 
-        punct= Integer.parseInt(score);
+        try {
+            punct = Integer.parseInt(score);
+            error = false;
+        } catch (Exception e) {
+            Toast.makeText(this, " Error, favor de verificar datos ", Toast.LENGTH_SHORT).show();
+            error = true;
+        }
         //button.setText(score);
 
+        if (score != scoreDefault) {
+            final ParseQuery<ParseObject> query = ParseQuery.getQuery("Puntuacionesv2");
+            query.whereEqualTo("Estaciones", estacion);
+            final ParseQuery<ParseObject> query1 = ParseQuery.getQuery("Puntuacionesv2");
 
-        final ParseQuery<ParseObject> query = ParseQuery.getQuery("Puntuacionesv2");
-        query.whereEqualTo("Estaciones", estacion);
-        final ParseQuery<ParseObject> query1 = ParseQuery.getQuery("Puntuacionesv2");
+            query.findInBackground(new FindCallback<ParseObject>() {
+                public void done(List<ParseObject> equipoList, ParseException e) {
+                    if ((e == null) && (error == false)) {
 
-        query.findInBackground(new FindCallback<ParseObject>() {
-            public void done(List<ParseObject> equipoList, ParseException e) {
-                if (e == null) {
+                        equipo = edificio + color;
+                        query.whereExists(equipo);
+                        query.findInBackground(new FindCallback<ParseObject>() {
+                            public void done(List<ParseObject> equipoList, ParseException e) {
+                                if ((e == null) && (error == false)) {
+                                    ParseObject object = equipoList.get(0);
+                                    Log.d("Equipos", "Error: " + e.getMessage());
+                                    object.put(equipo, score);
+                                    object.saveInBackground();
 
-                    equipo = edificio + color;
-                    query.whereExists(equipo);
-                    query.findInBackground(new FindCallback<ParseObject>() {
-                        public void done(List<ParseObject> equipoList, ParseException e) {
-                            if (e == null) {
-                                ParseObject object = equipoList.get(0);
-
-
-                                object.put(equipo, score);
-                                object.saveInBackground();
-
-                                success();
+                                    success();
 
 
-                            } else {
-                                fail();
+                                } else {
+                                    fail();
+                                }
                             }
-                        }
-                    });
+                        });
 
 
-                    //success();
+                        //success();
 
 
-                } else {
-                    Log.d("Equipos", "Error: " + e.getMessage());
+                    } else {
+                        Log.d("Equipos", "Error: " + e.getMessage());
+                    }
                 }
-            }
-        });
+            });
 
 
+        }
     }
     public void success()
     {
