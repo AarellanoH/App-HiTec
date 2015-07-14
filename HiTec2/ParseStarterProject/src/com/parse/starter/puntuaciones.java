@@ -1,6 +1,8 @@
 package com.parse.starter;
 
 import android.app.Activity;
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
@@ -98,9 +100,8 @@ public class puntuaciones extends Activity implements AdapterView.OnItemSelected
                         query.whereExists(equipo);
                         query.findInBackground(new FindCallback<ParseObject>() {
                             public void done(List<ParseObject> equipoList, ParseException e) {
-                                if ((e == null) && (error == false)) {
+                                if (e == null) {
                                     ParseObject object = equipoList.get(0);
-                                    Log.d("Equipos", "Error: " + e.getMessage());
                                     object.put(equipo, score);
                                     object.saveInBackground();
 
@@ -128,7 +129,24 @@ public class puntuaciones extends Activity implements AdapterView.OnItemSelected
     }
     public void success()
     {
-        Toast.makeText(this," Puntuacion guardada exitosamente ", Toast.LENGTH_SHORT).show();
+        if(edificio.equals("EI"))
+            edificio = "INGENIERIA";
+        if(edificio.equals("ENH"))
+            edificio = "HUMANIDADES";
+        AlertDialog.Builder alert = new AlertDialog.Builder(this);
+        alert.setTitle("Exito");
+        alert.setMessage("Puntuacion de equipo " + edificio + " " + color + " guardada exitosamente. \nScore: " + score);
+        alert.setPositiveButton("OK", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+
+            }
+        });
+        alert.show();
+        spinnerColor.setSelection(0);
+        spinnerEdificio.setSelection(0);
+        spinnerScore.setSelection(0);
+        //Toast.makeText(this," Puntuacion guardada exitosamente ", Toast.LENGTH_SHORT).show();
 
 
     }
@@ -173,7 +191,8 @@ public class puntuaciones extends Activity implements AdapterView.OnItemSelected
             defaults = false;
 
         if(defaults==false)
-            Toast.makeText(this," Seleccionaste "+myText.getText(), Toast.LENGTH_SHORT).show();
+            defaults = false;
+            //Toast.makeText(this," Seleccionaste "+myText.getText(), Toast.LENGTH_SHORT).show();
     }
 
     public void onNothingSelected(AdapterView<?> parent) {
