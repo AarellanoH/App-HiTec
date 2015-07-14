@@ -5,16 +5,232 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5c5e81f7-4019-49ba-b172-9b7df7887739" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.2.1/taskArtifacts/cache.properties.lock" afterPath="$PROJECT_DIR$/.gradle/2.2.1/taskArtifacts/cache.properties.lock" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/.name" afterPath="$PROJECT_DIR$/.idea/.name" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/dex-cache/cache.xml" afterPath="$PROJECT_DIR$/build/intermediates/dex-cache/cache.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.2.1/taskArtifacts/fileHashes.bin" afterPath="$PROJECT_DIR$/.gradle/2.2.1/taskArtifacts/fileHashes.bin" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.2.1/taskArtifacts/fileSnapshots.bin" afterPath="$PROJECT_DIR$/.gradle/2.2.1/taskArtifacts/fileSnapshots.bin" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/gradle.xml" afterPath="$PROJECT_DIR$/.idea/gradle.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/gradle_project_sync_data.bin" afterPath="$PROJECT_DIR$/build/intermediates/gradle_project_sync_data.bin" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.2.1/taskArtifacts/outputFileStates.bin" afterPath="$PROJECT_DIR$/.gradle/2.2.1/taskArtifacts/outputFileStates.bin" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.2.1/taskArtifacts/taskArtifacts.bin" afterPath="$PROJECT_DIR$/.gradle/2.2.1/taskArtifacts/taskArtifacts.bin" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ParseStarterProject/build/intermediates/pre-dexed/debug/Parse-1.9.2-bcb94e838184c2bd91df3ee01210cd36cbd247e2.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ParseStarterProject/libs/Parse-1.9.2.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ParseStarterProject/build/intermediates/pre-dexed/debug/ParseCrashReporting-1.9.2-5f7e776aac1f9692ed573bfea894cab9cf1e20cb.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ParseStarterProject/libs/ParseCrashReporting-1.9.2.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ParseStarterProject/libs/ParseFacebookUtilsV3-1.9.2.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ParseStarterProject/libs/ParseFacebookUtilsV4-1.9.2.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ParseStarterProject/build/outputs/apk/ParseStarterProject-debug-unaligned.apk" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ParseStarterProject/build/outputs/apk/ParseStarterProject-debug.apk" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ParseStarterProject/build/intermediates/classes/debug/com/parse/starter/R$string.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ParseStarterProject/build/intermediates/classes/debug/com/parse/starter/R.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ParseStarterProject/libs/Parse-1.9.2-javadoc/resources/background.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ParseStarterProject/libs/ParseCrashReporting-1.9.2-javadoc/resources/background.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ParseStarterProject/libs/ParseFacebookUtilsV3-1.9.2-javadoc/resources/background.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ParseStarterProject/libs/ParseFacebookUtilsV4-1.9.2-javadoc/resources/background.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ParseStarterProject/build/intermediates/pre-dexed/debug/bolts-android-1.2.0-fef1f60c2f10b737358821f00b9fb914f85b1e4b.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ParseStarterProject/libs/bolts-android-1.2.0-javadoc.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ParseStarterProject/libs/bolts-android-1.2.0.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ParseStarterProject/build/intermediates/dex/debug/classes.dex" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ParseStarterProject/build/intermediates/incremental/aidl/androidTest/debug/dependency.store" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ParseStarterProject/build/intermediates/incremental/aidl/debug/dependency.store" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ParseStarterProject/gradle/wrapper/gradle-wrapper.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ParseStarterProject/build/intermediates/res/debug/drawable-hdpi-v4/ic_launcher.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ParseStarterProject/build/intermediates/res/debug/drawable-ldpi-v4/ic_launcher.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ParseStarterProject/build/intermediates/res/debug/drawable-mdpi-v4/ic_launcher.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ParseStarterProject/build/intermediates/res/debug/drawable-xhdpi-v4/ic_launcher.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ParseStarterProject/res/drawable-hdpi/ic_launcher.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ParseStarterProject/res/drawable-ldpi/ic_launcher.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ParseStarterProject/res/drawable-mdpi/ic_launcher.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ParseStarterProject/res/drawable-xhdpi/ic_launcher.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ParseStarterProject/build/intermediates/classes/debug/com/parse/starter/puntuaciones$1$1.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ParseStarterProject/build/intermediates/classes/debug/com/parse/starter/puntuaciones$1.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ParseStarterProject/build/intermediates/classes/debug/com/parse/starter/puntuaciones.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ParseStarterProject/build/intermediates/resources/resources-debug-androidTest.ap_" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ParseStarterProject/build/intermediates/resources/resources-debug.ap_" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ParseStarterProject/libs/Parse-1.9.2-javadoc/resources/tab.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ParseStarterProject/libs/ParseCrashReporting-1.9.2-javadoc/resources/tab.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ParseStarterProject/libs/ParseFacebookUtilsV3-1.9.2-javadoc/resources/tab.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ParseStarterProject/libs/ParseFacebookUtilsV4-1.9.2-javadoc/resources/tab.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ParseStarterProject/libs/Parse-1.9.2-javadoc/resources/titlebar.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ParseStarterProject/libs/ParseCrashReporting-1.9.2-javadoc/resources/titlebar.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ParseStarterProject/libs/ParseFacebookUtilsV3-1.9.2-javadoc/resources/titlebar.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ParseStarterProject/libs/ParseFacebookUtilsV4-1.9.2-javadoc/resources/titlebar.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ParseStarterProject/libs/Parse-1.9.2-javadoc/resources/titlebar_end.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ParseStarterProject/libs/ParseCrashReporting-1.9.2-javadoc/resources/titlebar_end.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ParseStarterProject/libs/ParseFacebookUtilsV3-1.9.2-javadoc/resources/titlebar_end.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ParseStarterProject/libs/ParseFacebookUtilsV4-1.9.2-javadoc/resources/titlebar_end.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ParseStarterProject/build/intermediates/manifests/androidTest/debug/AndroidManifest.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ParseStarterProject/build/intermediates/manifests/full/debug/AndroidManifest.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ParseStarterProject/libs/Parse-1.9.2-javadoc/com/parse/ConfigCallback.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ParseStarterProject/libs/Parse-1.9.2-javadoc/com/parse/class-use/ConfigCallback.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ParseStarterProject/libs/Parse-1.9.2-javadoc/com/parse/CountCallback.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ParseStarterProject/libs/Parse-1.9.2-javadoc/com/parse/class-use/CountCallback.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ParseStarterProject/libs/Parse-1.9.2-javadoc/com/parse/DeleteCallback.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ParseStarterProject/libs/Parse-1.9.2-javadoc/com/parse/class-use/DeleteCallback.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ParseStarterProject/libs/Parse-1.9.2-javadoc/com/parse/FindCallback.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ParseStarterProject/libs/Parse-1.9.2-javadoc/com/parse/class-use/FindCallback.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ParseStarterProject/libs/Parse-1.9.2-javadoc/com/parse/FunctionCallback.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ParseStarterProject/libs/Parse-1.9.2-javadoc/com/parse/class-use/FunctionCallback.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ParseStarterProject/libs/Parse-1.9.2-javadoc/com/parse/GetCallback.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ParseStarterProject/libs/Parse-1.9.2-javadoc/com/parse/class-use/GetCallback.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ParseStarterProject/libs/Parse-1.9.2-javadoc/com/parse/GetDataCallback.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ParseStarterProject/libs/Parse-1.9.2-javadoc/com/parse/class-use/GetDataCallback.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ParseStarterProject/libs/Parse-1.9.2-javadoc/com/parse/LocationCallback.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ParseStarterProject/libs/Parse-1.9.2-javadoc/com/parse/class-use/LocationCallback.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ParseStarterProject/libs/Parse-1.9.2-javadoc/com/parse/LogInCallback.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ParseStarterProject/libs/Parse-1.9.2-javadoc/com/parse/class-use/LogInCallback.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ParseStarterProject/libs/Parse-1.9.2-javadoc/com/parse/LogOutCallback.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ParseStarterProject/libs/Parse-1.9.2-javadoc/com/parse/class-use/LogOutCallback.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ParseStarterProject/libs/Parse-1.9.2.jar.properties" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ParseStarterProject/libs/Parse-1.9.2-javadoc/com/parse/Parse.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ParseStarterProject/libs/Parse-1.9.2-javadoc/com/parse/class-use/Parse.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ParseStarterProject/libs/Parse-1.9.2-javadoc/com/parse/ParseACL.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ParseStarterProject/libs/Parse-1.9.2-javadoc/com/parse/class-use/ParseACL.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ParseStarterProject/libs/Parse-1.9.2-javadoc/com/parse/ParseAnalytics.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ParseStarterProject/libs/Parse-1.9.2-javadoc/com/parse/class-use/ParseAnalytics.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ParseStarterProject/libs/Parse-1.9.2-javadoc/com/parse/ParseAnonymousUtils.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ParseStarterProject/libs/Parse-1.9.2-javadoc/com/parse/class-use/ParseAnonymousUtils.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ParseStarterProject/src/com/parse/starter/ParseApplication.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ParseStarterProject/libs/Parse-1.9.2-javadoc/com/parse/ParseClassName.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ParseStarterProject/libs/Parse-1.9.2-javadoc/com/parse/class-use/ParseClassName.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ParseStarterProject/libs/Parse-1.9.2-javadoc/com/parse/ParseCloud.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ParseStarterProject/libs/Parse-1.9.2-javadoc/com/parse/class-use/ParseCloud.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ParseStarterProject/libs/Parse-1.9.2-javadoc/com/parse/ParseConfig.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ParseStarterProject/libs/Parse-1.9.2-javadoc/com/parse/class-use/ParseConfig.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ParseStarterProject/libs/ParseCrashReporting-1.9.2.jar.properties" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ParseStarterProject/libs/ParseCrashReporting-1.9.2-javadoc/com/parse/ParseCrashReporting.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ParseStarterProject/libs/ParseCrashReporting-1.9.2-javadoc/com/parse/class-use/ParseCrashReporting.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ParseStarterProject/libs/Parse-1.9.2-javadoc/com/parse/ParseException.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ParseStarterProject/libs/Parse-1.9.2-javadoc/com/parse/class-use/ParseException.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ParseStarterProject/libs/ParseFacebookUtilsV3-1.9.2-javadoc/com/parse/ParseFacebookUtils.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ParseStarterProject/libs/ParseFacebookUtilsV3-1.9.2-javadoc/com/parse/class-use/ParseFacebookUtils.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ParseStarterProject/libs/ParseFacebookUtilsV4-1.9.2-javadoc/com/parse/ParseFacebookUtils.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ParseStarterProject/libs/ParseFacebookUtilsV4-1.9.2-javadoc/com/parse/class-use/ParseFacebookUtils.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ParseStarterProject/libs/ParseFacebookUtilsV3-1.9.2.jar.properties" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ParseStarterProject/libs/ParseFacebookUtilsV4-1.9.2.jar.properties" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ParseStarterProject/libs/Parse-1.9.2-javadoc/com/parse/ParseFile.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ParseStarterProject/libs/Parse-1.9.2-javadoc/com/parse/class-use/ParseFile.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ParseStarterProject/libs/Parse-1.9.2-javadoc/com/parse/ParseGeoPoint.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ParseStarterProject/libs/Parse-1.9.2-javadoc/com/parse/class-use/ParseGeoPoint.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ParseStarterProject/libs/Parse-1.9.2-javadoc/com/parse/ParseImageView.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ParseStarterProject/libs/Parse-1.9.2-javadoc/com/parse/class-use/ParseImageView.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ParseStarterProject/libs/Parse-1.9.2-javadoc/com/parse/ParseInstallation.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ParseStarterProject/libs/Parse-1.9.2-javadoc/com/parse/class-use/ParseInstallation.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ParseStarterProject/libs/Parse-1.9.2-javadoc/com/parse/ParseObject.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ParseStarterProject/libs/Parse-1.9.2-javadoc/com/parse/class-use/ParseObject.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ParseStarterProject/libs/Parse-1.9.2-javadoc/com/parse/ParsePush.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ParseStarterProject/libs/Parse-1.9.2-javadoc/com/parse/class-use/ParsePush.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ParseStarterProject/libs/Parse-1.9.2-javadoc/com/parse/ParsePushBroadcastReceiver.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ParseStarterProject/libs/Parse-1.9.2-javadoc/com/parse/class-use/ParsePushBroadcastReceiver.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ParseStarterProject/libs/Parse-1.9.2-javadoc/com/parse/ParseQuery.CachePolicy.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ParseStarterProject/libs/Parse-1.9.2-javadoc/com/parse/class-use/ParseQuery.CachePolicy.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ParseStarterProject/libs/Parse-1.9.2-javadoc/com/parse/ParseQuery.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ParseStarterProject/libs/Parse-1.9.2-javadoc/com/parse/class-use/ParseQuery.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ParseStarterProject/libs/Parse-1.9.2-javadoc/com/parse/ParseQueryAdapter.OnQueryLoadListener.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ParseStarterProject/libs/Parse-1.9.2-javadoc/com/parse/class-use/ParseQueryAdapter.OnQueryLoadListener.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ParseStarterProject/libs/Parse-1.9.2-javadoc/com/parse/ParseQueryAdapter.QueryFactory.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ParseStarterProject/libs/Parse-1.9.2-javadoc/com/parse/class-use/ParseQueryAdapter.QueryFactory.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ParseStarterProject/libs/Parse-1.9.2-javadoc/com/parse/ParseQueryAdapter.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ParseStarterProject/libs/Parse-1.9.2-javadoc/com/parse/class-use/ParseQueryAdapter.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ParseStarterProject/libs/Parse-1.9.2-javadoc/com/parse/ParseRelation.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ParseStarterProject/libs/Parse-1.9.2-javadoc/com/parse/class-use/ParseRelation.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ParseStarterProject/libs/Parse-1.9.2-javadoc/com/parse/ParseRole.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ParseStarterProject/libs/Parse-1.9.2-javadoc/com/parse/class-use/ParseRole.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ParseStarterProject/libs/Parse-1.9.2-javadoc/com/parse/ParseSession.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ParseStarterProject/libs/Parse-1.9.2-javadoc/com/parse/class-use/ParseSession.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ParseStarterProject/src/com/parse/starter/ParseStarterProjectActivity.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ParseStarterProject/libs/Parse-1.9.2-javadoc/com/parse/ParseTwitterUtils.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ParseStarterProject/libs/Parse-1.9.2-javadoc/com/parse/class-use/ParseTwitterUtils.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ParseStarterProject/libs/Parse-1.9.2-javadoc/com/parse/ParseUser.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ParseStarterProject/libs/Parse-1.9.2-javadoc/com/parse/class-use/ParseUser.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ParseStarterProject/libs/Parse-1.9.2-javadoc/com/parse/ProgressCallback.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ParseStarterProject/libs/Parse-1.9.2-javadoc/com/parse/class-use/ProgressCallback.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ParseStarterProject/libs/Parse-1.9.2-javadoc/com/parse/PushService.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ParseStarterProject/libs/Parse-1.9.2-javadoc/com/parse/class-use/PushService.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ParseStarterProject/libs/Parse-1.9.2-javadoc/com/parse/RefreshCallback.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ParseStarterProject/libs/Parse-1.9.2-javadoc/com/parse/class-use/RefreshCallback.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ParseStarterProject/libs/Parse-1.9.2-javadoc/com/parse/RequestPasswordResetCallback.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ParseStarterProject/libs/Parse-1.9.2-javadoc/com/parse/class-use/RequestPasswordResetCallback.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ParseStarterProject/libs/Parse-1.9.2-javadoc/com/parse/SaveCallback.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ParseStarterProject/libs/Parse-1.9.2-javadoc/com/parse/class-use/SaveCallback.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ParseStarterProject/libs/Parse-1.9.2-javadoc/com/parse/SendCallback.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ParseStarterProject/libs/Parse-1.9.2-javadoc/com/parse/class-use/SendCallback.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ParseStarterProject/libs/Parse-1.9.2-javadoc/com/parse/SignUpCallback.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ParseStarterProject/libs/Parse-1.9.2-javadoc/com/parse/class-use/SignUpCallback.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ParseStarterProject/build/intermediates/res/debug/layout/activity_puntuaciones.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ParseStarterProject/res/layout/activity_puntuaciones.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ParseStarterProject/libs/Parse-1.9.2-javadoc/allclasses-frame.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ParseStarterProject/libs/ParseCrashReporting-1.9.2-javadoc/allclasses-frame.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ParseStarterProject/libs/ParseFacebookUtilsV3-1.9.2-javadoc/allclasses-frame.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ParseStarterProject/libs/ParseFacebookUtilsV4-1.9.2-javadoc/allclasses-frame.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ParseStarterProject/libs/Parse-1.9.2-javadoc/allclasses-noframe.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ParseStarterProject/libs/ParseCrashReporting-1.9.2-javadoc/allclasses-noframe.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ParseStarterProject/libs/ParseFacebookUtilsV3-1.9.2-javadoc/allclasses-noframe.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ParseStarterProject/libs/ParseFacebookUtilsV4-1.9.2-javadoc/allclasses-noframe.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ParseStarterProject/libs/bolts-android-1.2.0.jar.properties" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ParseStarterProject/libs/Parse-1.9.2-javadoc/constant-values.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ParseStarterProject/libs/ParseCrashReporting-1.9.2-javadoc/constant-values.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ParseStarterProject/libs/ParseFacebookUtilsV3-1.9.2-javadoc/constant-values.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ParseStarterProject/libs/ParseFacebookUtilsV4-1.9.2-javadoc/constant-values.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ParseStarterProject/libs/Parse-1.9.2-javadoc/deprecated-list.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ParseStarterProject/libs/ParseCrashReporting-1.9.2-javadoc/deprecated-list.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ParseStarterProject/libs/ParseFacebookUtilsV3-1.9.2-javadoc/deprecated-list.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ParseStarterProject/libs/ParseFacebookUtilsV4-1.9.2-javadoc/deprecated-list.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ParseStarterProject/res/values/dimens.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ParseStarterProject/res/values-w820dp/dimens.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ParseStarterProject/gradle/wrapper/gradle-wrapper.properties" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ParseStarterProject/gradlew.bat" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ParseStarterProject/gradlew" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ParseStarterProject/libs/Parse-1.9.2-javadoc/help-doc.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ParseStarterProject/libs/ParseCrashReporting-1.9.2-javadoc/help-doc.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ParseStarterProject/libs/ParseFacebookUtilsV3-1.9.2-javadoc/help-doc.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ParseStarterProject/libs/ParseFacebookUtilsV4-1.9.2-javadoc/help-doc.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ParseStarterProject/libs/Parse-1.9.2-javadoc/index-all.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ParseStarterProject/libs/ParseCrashReporting-1.9.2-javadoc/index-all.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ParseStarterProject/libs/ParseFacebookUtilsV3-1.9.2-javadoc/index-all.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ParseStarterProject/libs/ParseFacebookUtilsV4-1.9.2-javadoc/index-all.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ParseStarterProject/libs/Parse-1.9.2-javadoc/index.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ParseStarterProject/libs/ParseCrashReporting-1.9.2-javadoc/index.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ParseStarterProject/libs/ParseFacebookUtilsV3-1.9.2-javadoc/index.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ParseStarterProject/libs/ParseFacebookUtilsV4-1.9.2-javadoc/index.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ParseStarterProject/local.properties" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ParseStarterProject/build/intermediates/res/debug/layout/main.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ParseStarterProject/res/layout/main.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ParseStarterProject/build/outputs/logs/manifest-merger-debug-report.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ParseStarterProject/build/intermediates/res/debug/menu/menu_puntuaciones.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ParseStarterProject/res/menu/menu_puntuaciones.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ParseStarterProject/build/intermediates/incremental/mergeAssets/androidTest/debug/merger.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ParseStarterProject/build/intermediates/incremental/mergeAssets/debug/merger.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ParseStarterProject/build/intermediates/incremental/mergeResources/androidTest/debug/merger.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ParseStarterProject/build/intermediates/incremental/mergeResources/debug/merger.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ParseStarterProject/libs/Parse-1.9.2-javadoc/overview-tree.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ParseStarterProject/libs/ParseCrashReporting-1.9.2-javadoc/overview-tree.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ParseStarterProject/libs/ParseFacebookUtilsV3-1.9.2-javadoc/overview-tree.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ParseStarterProject/libs/ParseFacebookUtilsV4-1.9.2-javadoc/overview-tree.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ParseStarterProject/libs/Parse-1.9.2-javadoc/com/parse/package-frame.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ParseStarterProject/libs/ParseCrashReporting-1.9.2-javadoc/com/parse/package-frame.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ParseStarterProject/libs/ParseFacebookUtilsV3-1.9.2-javadoc/com/parse/package-frame.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ParseStarterProject/libs/ParseFacebookUtilsV4-1.9.2-javadoc/com/parse/package-frame.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ParseStarterProject/libs/Parse-1.9.2-javadoc/package-list" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ParseStarterProject/libs/ParseCrashReporting-1.9.2-javadoc/package-list" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ParseStarterProject/libs/ParseFacebookUtilsV3-1.9.2-javadoc/package-list" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ParseStarterProject/libs/ParseFacebookUtilsV4-1.9.2-javadoc/package-list" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ParseStarterProject/libs/Parse-1.9.2-javadoc/com/parse/package-summary.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ParseStarterProject/libs/ParseCrashReporting-1.9.2-javadoc/com/parse/package-summary.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ParseStarterProject/libs/ParseFacebookUtilsV3-1.9.2-javadoc/com/parse/package-summary.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ParseStarterProject/libs/ParseFacebookUtilsV4-1.9.2-javadoc/com/parse/package-summary.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ParseStarterProject/libs/Parse-1.9.2-javadoc/com/parse/package-tree.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ParseStarterProject/libs/ParseCrashReporting-1.9.2-javadoc/com/parse/package-tree.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ParseStarterProject/libs/ParseFacebookUtilsV3-1.9.2-javadoc/com/parse/package-tree.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ParseStarterProject/libs/ParseFacebookUtilsV4-1.9.2-javadoc/com/parse/package-tree.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ParseStarterProject/libs/Parse-1.9.2-javadoc/com/parse/package-use.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ParseStarterProject/libs/ParseCrashReporting-1.9.2-javadoc/com/parse/package-use.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ParseStarterProject/libs/ParseFacebookUtilsV3-1.9.2-javadoc/com/parse/package-use.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ParseStarterProject/libs/ParseFacebookUtilsV4-1.9.2-javadoc/com/parse/package-use.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ParseStarterProject/project.properties" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ParseStarterProject/src/com/parse/starter/puntuaciones.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ParseStarterProject/libs/Parse-1.9.2-javadoc/serialized-form.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ParseStarterProject/res/values/strings.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ParseStarterProject/libs/Parse-1.9.2-javadoc/stylesheet.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ParseStarterProject/libs/ParseCrashReporting-1.9.2-javadoc/stylesheet.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ParseStarterProject/libs/ParseFacebookUtilsV3-1.9.2-javadoc/stylesheet.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ParseStarterProject/libs/ParseFacebookUtilsV4-1.9.2-javadoc/stylesheet.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ParseStarterProject/third_party_licenses.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ParseStarterProject/build/intermediates/res/debug/values/values.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ParseStarterProject/build/intermediates/res/debug/values-w820dp-v13/values.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="HiTec2.iws" />
@@ -1332,12 +1548,106 @@
     <ConfirmationsSetting value="0" id="Add" />
     <ConfirmationsSetting value="0" id="Remove" />
   </component>
+  <component name="ProjectView">
+    <navigator currentView="ProjectPane" proportions="" version="1">
+      <flattenPackages />
+      <showMembers />
+      <showModules />
+      <showLibraryContents />
+      <hideEmptyPackages />
+      <abbreviatePackageNames />
+      <autoscrollToSource />
+      <autoscrollFromSource />
+      <sortByType />
+    </navigator>
+    <panes>
+      <pane id="AndroidView" />
+      <pane id="Scratches" />
+      <pane id="Scope" />
+      <pane id="ProjectPane">
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="HiTec2" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="External Libraries" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ExternalLibrariesNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="HiTec2" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="HiTec2" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="HiTec2" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="HiTec2" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ParseStarterProject" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="HiTec2" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="HiTec2" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ParseStarterProject" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="res" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="HiTec2" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="HiTec2" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ParseStarterProject" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="libs" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
+      <pane id="PackagesPane" />
+    </panes>
+  </component>
   <component name="PropertiesComponent">
     <property name="settings.editor.selected.configurable" value="com.genymobile.genymotion.ide.idea.GdmSettings" />
     <property name="settings.editor.splitter.proportion" value="0.2" />
     <property name="recentsLimit" value="5" />
     <property name="ANDROID_EXTENDED_DEVICE_CHOOSER_SERIALS" value="192.168.56.101:5555" />
     <property name="ANDROID_EXTENDED_DEVICE_CHOOSER_AVD" value="Nexus_5_API_21_x86" />
+    <property name="FullScreen" value="false" />
   </component>
   <component name="RunManager" selected="Android Application.ParseStarterProject">
     <configuration default="true" type="AndroidRunConfigurationType" factoryName="Android Application">
@@ -1346,6 +1656,31 @@
       <option name="MODE" value="default_activity" />
       <option name="DEPLOY" value="true" />
       <option name="ARTIFACT_NAME" value="" />
+      <option name="TARGET_SELECTION_MODE" value="EMULATOR" />
+      <option name="USE_LAST_SELECTED_DEVICE" value="false" />
+      <option name="PREFERRED_AVD" value="" />
+      <option name="USE_COMMAND_LINE" value="true" />
+      <option name="COMMAND_LINE" value="" />
+      <option name="WIPE_USER_DATA" value="false" />
+      <option name="DISABLE_BOOT_ANIMATION" value="false" />
+      <option name="NETWORK_SPEED" value="full" />
+      <option name="NETWORK_LATENCY" value="none" />
+      <option name="CLEAR_LOGCAT" value="false" />
+      <option name="SHOW_LOGCAT_AUTOMATICALLY" value="true" />
+      <option name="FILTER_LOGCAT_AUTOMATICALLY" value="true" />
+      <option name="SELECTED_MATRIX_CONFIGURATION_ID" value="0" />
+      <option name="SELECTED_CLOUD_PROJECT_ID" value="" />
+      <option name="IS_VALID_CLOUD_SELECTION" value="false" />
+      <option name="INVALID_CLOUD_SELECTION_ERROR" value="" />
+      <method />
+    </configuration>
+    <configuration default="true" type="AndroidTestRunConfigurationType" factoryName="Android Tests">
+      <module name="" />
+      <option name="TESTING_TYPE" value="0" />
+      <option name="INSTRUMENTATION_RUNNER_CLASS" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="CLASS_NAME" value="" />
+      <option name="PACKAGE_NAME" value="" />
       <option name="TARGET_SELECTION_MODE" value="EMULATOR" />
       <option name="USE_LAST_SELECTED_DEVICE" value="false" />
       <option name="PREFERRED_AVD" value="" />
@@ -1379,6 +1714,22 @@
       <envs />
       <method />
     </configuration>
+    <configuration default="true" type="GradleRunConfiguration" factoryName="Gradle">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list />
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <method />
+    </configuration>
     <configuration default="true" type="JUnit" factoryName="JUnit">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <module name="" />
@@ -1398,6 +1749,11 @@
       </option>
       <envs />
       <patterns />
+      <method />
+    </configuration>
+    <configuration default="true" type="JarApplication" factoryName="JAR Application">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <envs />
       <method />
     </configuration>
     <configuration default="true" type="Remote" factoryName="Remote">
@@ -1487,6 +1843,13 @@
       <option name="number" value="Default" />
       <updated>1436838145272</updated>
     </task>
+    <task id="LOCAL-00001" summary="Primer commit en que existe posibilidad de que funcione">
+      <created>1436838350424</created>
+      <option name="number" value="00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1436838350424</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -1494,35 +1857,47 @@
     <editor active="false" />
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Build Variants" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
-      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32912844" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Captures" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Gradle Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
-      <window_info id="Android" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3298969" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Build Variants" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3298969" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Captures" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Android" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3298969" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Gradle Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24973261" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32912844" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
+  </component>
+  <component name="Vcs.Log.UiProperties">
+    <option name="RECENTLY_FILTERED_USER_GROUPS">
+      <collection />
+    </option>
+    <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
+      <collection />
+    </option>
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Primer commit en que existe posibilidad de que funcione" />
+    <option name="LAST_COMMIT_MESSAGE" value="Primer commit en que existe posibilidad de que funcione" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
