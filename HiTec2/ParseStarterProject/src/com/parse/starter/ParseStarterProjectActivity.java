@@ -79,9 +79,15 @@ public class ParseStarterProjectActivity extends Activity implements AdapterView
 		ParseUser.logInInBackground(usern, pass, new LogInCallback() {
 			public void done(ParseUser user, ParseException e) {
 				if (user != null) {
-
 					success(user);
-					ParseStarterProjectActivity.this.startActivity(new Intent(ParseStarterProjectActivity.this,puntuaciones.class));
+					String usuario = user.get("Estacion").toString();
+					if(usuario.equals("Bonus")){
+						ParseStarterProjectActivity.this.startActivity(new Intent(ParseStarterProjectActivity.this,puntosBonus.class));
+
+					}
+					else {
+						ParseStarterProjectActivity.this.startActivity(new Intent(ParseStarterProjectActivity.this, puntuaciones.class));
+					}
 
 				} else {
 					failure();

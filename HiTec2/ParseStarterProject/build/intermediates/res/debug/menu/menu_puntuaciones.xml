@@ -3,4 +3,4 @@
     <item android:id="@+id/action_settings" android:title="@string/action_settings"
         android:orderInCategory="100" android:showAsAction="never" />
 </menu>
-<!-- From: file:/C:/Users/Alejandro/Documents/GitHub/App-HiTec/HiTec2/ParseStarterProject/res/menu/menu_puntuaciones.xml -->
+<!-- From: file:/C:/Users/GabrielAntonio/Documents/DocumentosAcademicos/App-HiTec/HiTec2/ParseStarterProject/res/menu/menu_puntuaciones.xml -->

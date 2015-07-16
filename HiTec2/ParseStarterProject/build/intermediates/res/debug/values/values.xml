@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <!-- From: file:/C:/Users/Alejandro/Documents/GitHub/App-HiTec/HiTec2/ParseStarterProject/res/values/strings.xml -->
+    <!-- From: file:/C:/Users/GabrielAntonio/Documents/DocumentosAcademicos/App-HiTec/HiTec2/ParseStarterProject/res/values/strings.xml -->
     <eat-comment/>
     <string-array name="Colores">
         <item>Color del equipo</item>
@@ -85,11 +85,11 @@
         <item>45</item>
 
     </string-array>
-    <!-- From: file:/C:/Users/Alejandro/Documents/GitHub/App-HiTec/HiTec2/ParseStarterProject/res/values/dimens.xml -->
+    <!-- From: file:/C:/Users/GabrielAntonio/Documents/DocumentosAcademicos/App-HiTec/HiTec2/ParseStarterProject/res/values/dimens.xml -->
     <eat-comment/>
     <dimen name="activity_horizontal_margin">16dp</dimen>
     <dimen name="activity_vertical_margin">16dp</dimen>
-    <!-- From: file:/C:/Users/Alejandro/Documents/GitHub/App-HiTec/HiTec2/ParseStarterProject/res/values/strings.xml -->
+    <!-- From: file:/C:/Users/GabrielAntonio/Documents/DocumentosAcademicos/App-HiTec/HiTec2/ParseStarterProject/res/values/strings.xml -->
     <eat-comment/>
     <string name="action_settings">Settings</string>
     <string name="app_name">HiTecApp</string>
@@ -97,5 +97,6 @@
     <string name="hello_world">Hello world!</string>
     <string name="parse_app_id">YOUR_APPLICATION_ID</string>
     <string name="parse_client_key">YOUR_CLIENT_KEY</string>
+    <string name="title_activity_puntos_bonus">puntosBonus</string>
     <string name="title_activity_puntuaciones">puntuaciones</string>
 </resources>

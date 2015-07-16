@@ -44,6 +44,10 @@
             android:name="com.parse.starter.puntuaciones"
             android:label="@string/title_activity_puntuaciones" >
         </activity>
+        <activity
+            android:name="com.parse.starter.puntosBonus"
+            android:label="@string/title_activity_puntos_bonus" >
+        </activity>
     </application>
 
 </manifest>
