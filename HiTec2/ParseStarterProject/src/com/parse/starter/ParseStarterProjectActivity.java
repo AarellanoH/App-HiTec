@@ -60,9 +60,8 @@ public class ParseStarterProjectActivity extends Activity implements AdapterView
 	}
 	public void success(ParseUser user)
 	{
-		Toast.makeText(this," Log in succeeded ", Toast.LENGTH_SHORT).show();
 		estacion= user.get("Estacion").toString();
-		Toast.makeText(this,estacion, Toast.LENGTH_SHORT).show();
+		Toast.makeText(this," Login succeeded as " + estacion, Toast.LENGTH_SHORT).show();
 	}
 	public void failure()
 	{

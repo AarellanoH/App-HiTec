@@ -12,6 +12,8 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.RadioButton;
+import android.widget.RadioGroup;
 import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -27,17 +29,30 @@ import java.util.List;
 
 
 public class puntuaciones extends Activity implements AdapterView.OnItemSelectedListener{
+    RadioGroup groupTermino;
+    RadioGroup groupParticipacion;
+    RadioGroup groupCompromiso;
+
     Spinner spinnerEdificio;
     Spinner spinnerColor;
-    Spinner spinnerScore;
-    boolean listo = false, defaults=false, error=false;
+    boolean listo = false, defaults=true, error=false;
     int punct;
-    String edificio, color, estacion, score, equipo;
+    String edificio, color, estacion, equipo;
     String edificioDefault,colorDefault,scoreDefault;
+    int count = 0;
+    String[] listaEdificios = {"CIT","EI","ENH","PIT"};
+    int scoreTermino,scoreParticipacion,scoreCompromiso,scoreTotal;
+    boolean terminoDeafult=true, participacionDefault=true,compromisoDefault=true;
+
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_puntuaciones);
+        this.setTitle(ParseUser.getCurrentUser().get("Estacion").toString());
 
         ParseAnalytics.trackAppOpenedInBackground(getIntent());
         spinnerEdificio = (Spinner)findViewById(R.id.spinnerEdificio);
@@ -47,15 +62,10 @@ public class puntuaciones extends Activity implements AdapterView.OnItemSelected
         spinnerEdificio.setAdapter(adapterEdificio);
         spinnerEdificio.setOnItemSelectedListener(this);
 
+        groupTermino = (RadioGroup)findViewById(R.id.groupTermino);
+        groupParticipacion = (RadioGroup)findViewById(R.id.groupParticipacion);
+        groupCompromiso = (RadioGroup)findViewById(R.id.groupCompromiso);
 
-
-
-        spinnerScore = (Spinner)findViewById(R.id.spinnerScore);
-
-
-        ArrayAdapter adapterScore =ArrayAdapter.createFromResource(this, R.array.Score, android.R.layout.simple_spinner_item);
-        spinnerScore.setAdapter(adapterScore);
-        spinnerScore.setOnItemSelectedListener(this);
 
         spinnerColor = (Spinner)findViewById(R.id.spinnerColor);
         ArrayAdapter adapterColor = ArrayAdapter.createFromResource(this,R.array.Colores,android.R.layout.simple_spinner_item);
@@ -64,8 +74,12 @@ public class puntuaciones extends Activity implements AdapterView.OnItemSelected
 
         edificioDefault = adapterEdificio.getItem(0).toString();
         colorDefault = adapterColor.getItem(0).toString();
-        scoreDefault = adapterScore.getItem(0).toString();
     }
+
+    public void onClickCancel(View v){
+        borrarSeleccion();
+    }
+
     public void onClickSubmit(View v) {
         Button button = (Button) v;
         ParseUser currentUser = ParseUser.getCurrentUser();
@@ -76,57 +90,47 @@ public class puntuaciones extends Activity implements AdapterView.OnItemSelected
         } else {
             // show the signup or login screen
         }
-        //Toast.makeText(this, estacion, Toast.LENGTH_SHORT).show();
 
-        try {
-            punct = Integer.parseInt(score);
-            error = false;
-        } catch (Exception e) {
-            Toast.makeText(this, " Error, favor de verificar datos ", Toast.LENGTH_SHORT).show();
-            error = true;
+
+        if((terminoDeafult==false) && (participacionDefault==false) && (compromisoDefault==false) && (defaults==false)){
+            sumarScores();
+            guardarScore(edificio,color,Integer.toString(scoreTotal));
         }
-        //button.setText(score);
-
-        if (score != scoreDefault) {
-            final ParseQuery<ParseObject> query = ParseQuery.getQuery("Puntuacionesv2");
-            query.whereEqualTo("Estaciones", estacion);
-            final ParseQuery<ParseObject> query1 = ParseQuery.getQuery("Puntuacionesv2");
-
-            query.findInBackground(new FindCallback<ParseObject>() {
-                public void done(List<ParseObject> equipoList, ParseException e) {
-                    if ((e == null) && (error == false)) {
-
-                        equipo = edificio + color;
-                        query.whereExists(equipo);
-                        query.findInBackground(new FindCallback<ParseObject>() {
-                            public void done(List<ParseObject> equipoList, ParseException e) {
-                                if (e == null) {
-                                    ParseObject object = equipoList.get(0);
-                                    object.put(equipo, score);
-                                    object.saveInBackground();
-
-                                    success();
-
-
-                                } else {
-                                    fail();
-                                }
-                            }
-                        });
-
-
-                        //success();
-
-
-                    } else {
-                        Log.d("Equipos", "Error: " + e.getMessage());
-                    }
-                }
-            });
-
-
+        else{
+            fail();
         }
+
+        /*
+        if (scoreNoValido != scoreDefault) {
+
+            if(edificio.equals("TODOS")){
+                edificio = "CIT";
+                guardarScore("CIT",color,scoreNoValido);
+                Log.d("Equipos", "Equipo antes de metodo" + equipo + " Score:" + scoreNoValido);
+
+                edificio = "EI";
+                guardarScore("EI",color,scoreNoValido);
+                Log.d("Equipos", "Equipo antes de metodo" + equipo + " Score:" + scoreNoValido);
+
+                edificio = "ENH";
+                guardarScore("ENH",color,scoreNoValido);
+                Log.d("Equipos", "Equipo antes de metodo" + equipo + " Score:" + scoreNoValido);
+
+                edificio = "PIT";
+                guardarScore("PIT", color, scoreNoValido);
+                Log.d("Equipos", "Equipo antes de metodo" + equipo + " Score:" + scoreNoValido);
+
+                //clearSelection();
+            }
+
+            else{
+                guardarScore(edificio,color,scoreNoValido);
+                clearSelection();
+            }
+        }
+        */
     }
+
     public void success()
     {
         if(edificio.equals("EI"))
@@ -135,31 +139,143 @@ public class puntuaciones extends Activity implements AdapterView.OnItemSelected
             edificio = "HUMANIDADES";
         AlertDialog.Builder alert = new AlertDialog.Builder(this);
         alert.setTitle("Exito");
-        alert.setMessage("Puntuacion de equipo " + edificio + " " + color + " guardada exitosamente. \nScore: " + score);
+        alert.setMessage("Puntuacion de equipo " + edificio + " " + color + " guardada exitosamente. \nScore: " + scoreTotal);
         alert.setPositiveButton("OK", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int which) {
-
+                borrarSeleccion();
             }
         });
         alert.show();
-        spinnerColor.setSelection(0);
-        spinnerEdificio.setSelection(0);
-        spinnerScore.setSelection(0);
-        //Toast.makeText(this," Puntuacion guardada exitosamente ", Toast.LENGTH_SHORT).show();
 
 
     }
+
     public void fail()
     {
-        Toast.makeText(this," Error, favor de verificar datos ", Toast.LENGTH_SHORT).show();
-
-
+        Toast.makeText(this," Error, favor de verificar los datos ", Toast.LENGTH_SHORT).show();
     }
+
+    public void guardarScore(String miEdificio, final String miColor, final String myScore){
+        final ParseQuery<ParseObject> query = ParseQuery.getQuery("Puntuacionesv2");
+        query.whereEqualTo("Estaciones", estacion);
+
+        equipo = miEdificio + miColor;
+        query.whereExists(equipo);
+        Log.d("Equipos", "Equipo" + equipo + " Score:" + scoreTotal);
+        query.findInBackground(new FindCallback<ParseObject>() {
+            public void done(List<ParseObject> equipoList, ParseException e) {
+                if (e == null) {
+                    ParseObject object = equipoList.get(0);
+                    object.put(equipo, myScore);
+
+                    object.saveEventually();
+
+                    success();
+                    /*
+                    while (count <= 4) {
+                        count++;
+                        guardarScore(listaEdificios[count], miColor, myScore);
+                    }
+                    */
+
+
+                } else {
+                    fail();
+                }
+            }
+        });
+    }
+
+    public void onRadioButtonClicked(View view) {
+
+        // Is the button now checked?
+        boolean checked = ((RadioButton) view).isChecked();
+
+        // Check which radio button was clicked
+        switch(view.getId()) {
+            //Los botones de haber terminado
+            case R.id.rdbTermSi:
+                if (checked){
+                    scoreTermino = 15;
+                    terminoDeafult = false;
+                }break;
+            case R.id.rdbTermNo:
+                if (checked){
+                    scoreTermino = 0;
+                    terminoDeafult = false;
+                }break;
+
+            //Los botones de calificacion en participacion
+            case R.id.rdbPart0:
+                if (checked){
+                    scoreParticipacion = 0;
+                    participacionDefault = false;
+                }break;
+            case R.id.rdbPart5:
+                if (checked){
+                    scoreParticipacion = 5;
+                    participacionDefault = false;
+                }break;
+            case R.id.rdbPart10:
+                if (checked){
+                    scoreParticipacion = 10;
+                    participacionDefault = false;
+                }break;
+            case R.id.rdbPart15:
+                if (checked){
+                    scoreParticipacion = 15;
+                    participacionDefault = false;
+                }break;
+
+            //Los botones de calificacion en compromiso
+            case R.id.rdbComp0:
+                if (checked){
+                    scoreCompromiso = 0;
+                    compromisoDefault = false;
+                }break;
+            case R.id.rdbComp5:
+                if (checked){
+                    scoreCompromiso = 5;
+                    compromisoDefault = false;
+                }break;
+            case R.id.rdbComp10:
+                if (checked){
+                    scoreCompromiso = 10;
+                    compromisoDefault = false;
+                }break;
+            case R.id.rdbComp15:
+                if (checked){
+                    scoreCompromiso = 15;
+                    compromisoDefault = false;
+                }break;
+
+        }
+    }
+
+    public void sumarScores(){
+        scoreTotal = scoreTermino + scoreParticipacion + scoreCompromiso;
+    }
+
+    public void borrarSeleccion(){
+        groupTermino.clearCheck();
+        groupParticipacion.clearCheck();
+        groupCompromiso.clearCheck();
+
+        spinnerColor.setSelection(0);
+        spinnerEdificio.setSelection(0);
+    }
+
     public  void Logout(View v){
         ParseUser.logOut();
         puntuaciones.this.startActivity(new Intent(puntuaciones.this, ParseStarterProjectActivity.class));
     }
+
+    public void Logout(){
+        ParseUser.logOut();
+        puntuaciones.this.startActivity(new Intent(puntuaciones.this, ParseStarterProjectActivity.class));
+    }
+
     public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
         TextView myText=(TextView) view;
         int counter=0;
@@ -182,17 +298,13 @@ public class puntuaciones extends Activity implements AdapterView.OnItemSelected
 
 
         //estacion = spinner1.getSelectedItem().toString();
-        score = spinnerScore.getSelectedItem().toString();
         color = spinnerColor.getSelectedItem().toString();
 
-        if(edificio.equals(edificioDefault) && color.equals(colorDefault) && score.equals(scoreDefault))
-            defaults = true;
+        if(!(edificio.equals(edificioDefault)) && !(color.equals(colorDefault)))
+            defaults = false;
         else
-            defaults = false;
+            defaults = true;
 
-        if(defaults==false)
-            defaults = false;
-            //Toast.makeText(this," Seleccionaste "+myText.getText(), Toast.LENGTH_SHORT).show();
     }
 
     public void onNothingSelected(AdapterView<?> parent) {
@@ -212,9 +324,8 @@ public class puntuaciones extends Activity implements AdapterView.OnItemSelected
         // as you specify a parent activity in AndroidManifest.xml.
         int id = item.getItemId();
 
-        //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
-            return true;
+        if(id == R.id.action_logout){
+            Logout();
         }
 
         return super.onOptionsItemSelected(item);

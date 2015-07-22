@@ -14,8 +14,9 @@
         android:textAlignment="center"
         android:gravity="center"
         android:layout_marginTop="20dp"
+        android:textColor="#b6dd40"
         android:textStyle="bold"
-        android:textSize="20dp"/>
+        android:textSize="26dp"/>
 
 
 
@@ -28,42 +29,171 @@
     android:gravity="top|center"
     android:textAlignment="center">
 
-    <Spinner
-
-        android:layout_width="316dp"
-        android:layout_height="wrap_content"
-        android:id="@+id/spinnerEdificio"
-        android:layout_marginTop="50dp" />
-    <Spinner
-
-        android:layout_width="316dp"
-        android:layout_height="wrap_content"
-        android:id="@+id/spinnerColor"
-        android:layout_marginTop="50dp" />
-
-    <Spinner
-
-        android:layout_width="316dp"
-        android:layout_height="wrap_content"
-        android:id="@+id/spinnerScore"
-        android:layout_marginTop="50dp" />
-
-    <Button
-        android:text="Submit"
-        android:layout_width="316dp"
-        android:layout_height="wrap_content"
-        android:id="@+id/submit"
-        android:onClick="onClickSubmit"
-        android:layout_marginTop="70dp" />
-
-    <Button
+    <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Log out"
-        android:id="@+id/button"
-        android:layout_gravity="center_horizontal"
-        android:onClick="Logout"
-        android:layout_marginTop="20dp"/>
+        android:text="Escoge al equipo que quieres calificar"
+        android:layout_gravity="top|left"
+        android:textSize="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="25dp"
+        android:textStyle="bold"/>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <Spinner
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/spinnerEdificio" />
+        <Spinner
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/spinnerColor"/>
+    </LinearLayout>
+
+    <TextView
+        android:layout_marginTop="50dp"
+        android:layout_marginLeft="16dp"
+        android:layout_gravity="left|top"
+        android:textSize="16dp"
+        android:text="El equipo terminó la actividad? (15 puntos)"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <RadioGroup
+        android:id="@+id/groupTermino"
+        android:layout_gravity="top|left"
+        android:layout_marginLeft="16dp"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+            <RadioButton
+                android:id="@+id/rdbTermSi"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Si"
+                android:onClick="onRadioButtonClicked"/>
+            <RadioButton
+                android:id="@+id/rdbTermNo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="No"
+                android:onClick="onRadioButtonClicked"/>
+    </RadioGroup>
+
+    <TextView
+        android:layout_marginTop="15dp"
+        android:layout_marginLeft="16dp"
+        android:layout_gravity="left|top"
+        android:textSize="16dp"
+        android:text="Calificación en participación"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <RadioGroup
+        android:id="@+id/groupParticipacion"
+        android:layout_gravity="top|left"
+        android:layout_marginLeft="16dp"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <RadioButton
+            android:layout_weight="1"
+            android:id="@+id/rdbPart0"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0"
+            android:onClick="onRadioButtonClicked"/>
+        <RadioButton
+            android:layout_weight="1"
+            android:id="@+id/rdbPart5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="5"
+            android:onClick="onRadioButtonClicked"/>
+        <RadioButton
+            android:layout_weight="1"
+            android:id="@+id/rdbPart10"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="10"
+            android:onClick="onRadioButtonClicked"/>
+        <RadioButton
+            android:layout_weight="1"
+            android:id="@+id/rdbPart15"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="15"
+            android:onClick="onRadioButtonClicked"/>
+    </RadioGroup>
+
+    <TextView
+        android:layout_marginTop="15dp"
+        android:layout_marginLeft="16dp"
+        android:layout_gravity="left|top"
+        android:textSize="16dp"
+        android:text="Calificación en compromiso"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <RadioGroup
+        android:id="@+id/groupCompromiso"
+        android:layout_gravity="top|left"
+        android:layout_marginLeft="16dp"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <RadioButton
+            android:layout_weight="1"
+            android:id="@+id/rdbComp0"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0"
+            android:onClick="onRadioButtonClicked"/>
+        <RadioButton
+            android:layout_weight="1"
+            android:id="@+id/rdbComp5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="5"
+            android:onClick="onRadioButtonClicked"/>
+        <RadioButton
+            android:layout_weight="1"
+            android:id="@+id/rdbComp10"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="10"
+            android:onClick="onRadioButtonClicked"/>
+        <RadioButton
+            android:layout_weight="1"
+            android:id="@+id/rdbComp15"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="15"
+            android:onClick="onRadioButtonClicked"/>
+    </RadioGroup>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:weightSum="4"
+        android:gravity="center"
+        android:layout_marginTop="40dp">
+
+        <Button
+            android:text="Submit"
+            android:layout_weight="1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/submit"
+            android:onClick="onClickSubmit" />
+        <Button
+            android:layout_weight="1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="onClickCancel"
+            android:text="Cancel"/>
+    </LinearLayout>
+
 </LinearLayout>
 </LinearLayout>
-<!-- From: file:/C:/Users/GabrielAntonio/Documents/DocumentosAcademicos/App-HiTec/HiTec2/ParseStarterProject/res/layout/activity_puntuaciones.xml -->
+<!-- From: file:/C:/Users/Alejandro/Documents/GitHub/App-HiTec/HiTec2/ParseStarterProject/res/layout/activity_puntuaciones.xml -->

@@ -15,8 +15,9 @@
         android:textAlignment="center"
         android:gravity="center"
         android:layout_marginTop="20dp"
+        android:textColor="#b6dd40"
         android:textStyle="bold"
-        android:textSize="20dp"/>
+        android:textSize="26dp"/>
 
 
     <EditText
@@ -47,4 +48,4 @@
         android:layout_gravity="center_horizontal" />
 
 
-</LinearLayout><!-- From: file:/C:/Users/GabrielAntonio/Documents/DocumentosAcademicos/App-HiTec/HiTec2/ParseStarterProject/res/layout/main.xml -->
+</LinearLayout><!-- From: file:/C:/Users/Alejandro/Documents/GitHub/App-HiTec/HiTec2/ParseStarterProject/res/layout/main.xml -->

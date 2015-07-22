@@ -28,11 +28,13 @@ import java.util.List;
 
 
 public class puntosBonus extends Activity implements AdapterView.OnItemSelectedListener{
+
     Spinner spinnerEdificio;
     Spinner spinnerColor;
     EditText textScore;
+    int scoreTotal = 0;
 
-    boolean listo = false, defaults=false, error=false;
+    boolean listo = false, defaults=true, error=false;
     int punct;
     String edificio, color, estacion, score, equipo;
 
@@ -41,6 +43,7 @@ public class puntosBonus extends Activity implements AdapterView.OnItemSelectedL
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_puntos_bonus);
+        this.setTitle("Puntos Bonus");
 
         ParseAnalytics.trackAppOpenedInBackground(getIntent());
         spinnerEdificio = (Spinner)findViewById(R.id.spinnerEdificio);
@@ -77,60 +80,57 @@ public class puntosBonus extends Activity implements AdapterView.OnItemSelectedL
         } else {
             // show the signup or login screen
         }
-        //Toast.makeText(this, estacion, Toast.LENGTH_SHORT).show();
 
         try {
             score = textScore.getText().toString();
             punct = Integer.parseInt(score);
             error = false;
         } catch (Exception e) {
-            Toast.makeText(this, " Error, favor de verificar datos ", Toast.LENGTH_SHORT).show();
-            error = true;
+            fail();
         }
 
-        //button.setText(score);
+        //button.setText(scoreNoValido);
 
-
-            final ParseQuery<ParseObject> query = ParseQuery.getQuery("Puntuacionesv2");
-            query.whereEqualTo("Estaciones", estacion);
-            final ParseQuery<ParseObject> query1 = ParseQuery.getQuery("Puntuacionesv2");
-
-            query.findInBackground(new FindCallback<ParseObject>() {
-                public void done(List<ParseObject> equipoList, ParseException e) {
-                    if ((e == null) && (error == false)) {
-
-                        equipo = edificio + color;
-                        query.whereExists(equipo);
-                        query.findInBackground(new FindCallback<ParseObject>() {
-                            public void done(List<ParseObject> equipoList, ParseException e) {
-                                if (e == null) {
-                                    ParseObject object = equipoList.get(0);
-                                    object.put(equipo, score);
-                                    object.saveInBackground();
-
-                                    success();
-
-
-                                } else {
-                                    fail();
-                                }
-                            }
-                        });
-
-
-                        //success();
-
-
-                    } else {
-                        Log.d("Equipos", "Error: ");
-                    }
-                }
-            });
-
-
-
-
+        if(defaults==false)
+            guardarScore(edificio,color,score);
+        else
+            fail();
     }
+
+
+    public void guardarScore(String miEdificio, final String miColor, final String myScore){
+        final ParseQuery<ParseObject> query = ParseQuery.getQuery("Puntuacionesv2");
+        query.whereEqualTo("Estaciones", estacion);
+
+        equipo = miEdificio + miColor;
+        query.whereExists(equipo);
+        Log.d("Equipos", "Equipo" + equipo + " Score:" + score);
+        query.findInBackground(new FindCallback<ParseObject>() {
+            public void done(List<ParseObject> equipoList, ParseException e) {
+                if (e == null) {
+                    ParseObject object = equipoList.get(0);
+                    String tempScore = object.get(equipo).toString();
+                    scoreTotal = Integer.parseInt(tempScore) + Integer.parseInt(myScore);
+                    object.put(equipo, Integer.toString(scoreTotal));
+
+                    object.saveEventually();
+
+                    success();
+                    /*
+                    while (count <= 4) {
+                        count++;
+                        guardarScore(listaEdificios[count], miColor, myScore);
+                    }
+                    */
+
+
+                } else {
+                    fail();
+                }
+            }
+        });
+    }
+
     public void success()
     {
         if(edificio.equals("EI"))
@@ -139,7 +139,7 @@ public class puntosBonus extends Activity implements AdapterView.OnItemSelectedL
             edificio = "HUMANIDADES";
         AlertDialog.Builder alert = new AlertDialog.Builder(this);
         alert.setTitle("Exito");
-        alert.setMessage("Puntuacion de equipo " + edificio + " " + color + " guardada exitosamente. \nScore: " + score);
+        alert.setMessage("Puntuacion de equipo " + edificio + " " + color + " guardada exitosamente. \nBonus dado: " + score + "\nBonus total: " + scoreTotal);
         alert.setPositiveButton("OK", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int which) {
@@ -147,24 +147,37 @@ public class puntosBonus extends Activity implements AdapterView.OnItemSelectedL
             }
         });
         alert.show();
+        borrarSeleccion();
+
+
+    }
+
+    public void borrarSeleccion(){
         spinnerColor.setSelection(0);
         spinnerEdificio.setSelection(0);
         textScore.setText("");
-
-        //Toast.makeText(this," Puntuacion guardada exitosamente ", Toast.LENGTH_SHORT).show();
-
-
     }
+
     public void fail()
     {
-        Toast.makeText(this," Error, favor de verificar datos ", Toast.LENGTH_SHORT).show();
-
+        Toast.makeText(this," Error, favor de verificar los datos ", Toast.LENGTH_SHORT).show();
 
     }
+
     public  void Logout(View v){
         ParseUser.logOut();
         puntosBonus.this.startActivity(new Intent(puntosBonus.this, ParseStarterProjectActivity.class));
     }
+
+    public void Logout(){
+        ParseUser.logOut();
+        puntosBonus.this.startActivity(new Intent(puntosBonus.this, ParseStarterProjectActivity.class));
+    }
+
+    public void onClickCancel(View view){
+        borrarSeleccion();
+    }
+
     public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
         TextView myText=(TextView) view;
         int counter=0;
@@ -190,19 +203,20 @@ public class puntosBonus extends Activity implements AdapterView.OnItemSelectedL
 
         color = spinnerColor.getSelectedItem().toString();
 
-        if(edificio.equals(edificioDefault) && color.equals(colorDefault) )
-            defaults = true;
+        if(!(edificio.equals(edificioDefault)) && !(color.equals(colorDefault)))
+            defaults = false;
         else
-            defaults = false;
-
-        if(defaults==false)
-            defaults = false;
-        //Toast.makeText(this," Seleccionaste "+myText.getText(), Toast.LENGTH_SHORT).show();
+            defaults = true;
     }
 
     public void onNothingSelected(AdapterView<?> parent) {
 
     }
+
+    public void sumarScores(){
+
+    }
+
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
@@ -217,9 +231,8 @@ public class puntosBonus extends Activity implements AdapterView.OnItemSelectedL
         // as you specify a parent activity in AndroidManifest.xml.
         int id = item.getItemId();
 
-        //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
-            return true;
+        if(id == R.id.action_logout){
+            Logout();
         }
 
         return super.onOptionsItemSelected(item);

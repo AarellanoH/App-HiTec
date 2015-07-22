@@ -1,6 +1,10 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools" tools:context="com.parse.starter.puntuaciones">
-    <item android:id="@+id/action_settings" android:title="@string/action_settings"
-        android:orderInCategory="100" android:showAsAction="never" />
+
+    <item
+        android:id="@+id/action_logout"
+        android:title="Logout"
+        android:showAsAction="ifRoom"/>
+
 </menu>
-<!-- From: file:/C:/Users/GabrielAntonio/Documents/DocumentosAcademicos/App-HiTec/HiTec2/ParseStarterProject/res/menu/menu_puntuaciones.xml -->
+<!-- From: file:/C:/Users/Alejandro/Documents/GitHub/App-HiTec/HiTec2/ParseStarterProject/res/menu/menu_puntuaciones.xml -->
