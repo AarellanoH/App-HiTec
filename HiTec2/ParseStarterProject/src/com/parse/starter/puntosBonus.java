@@ -92,7 +92,14 @@ public class puntosBonus extends Activity implements AdapterView.OnItemSelectedL
         //button.setText(scoreNoValido);
 
         if(defaults==false)
-            guardarScore(edificio,color,score);
+            try{
+                guardarScore(edificio,color,score);
+            }
+            catch (Exception e)
+            {
+
+            }
+
         else
             fail();
     }
@@ -110,6 +117,13 @@ public class puntosBonus extends Activity implements AdapterView.OnItemSelectedL
                 if (e == null) {
                     ParseObject object = equipoList.get(0);
                     String tempScore = object.get(equipo).toString();
+                    try{
+                        punct = Integer.parseInt(tempScore);
+                    }
+                    catch (Exception exc){
+                        tempScore = "0";
+                    }
+
                     scoreTotal = Integer.parseInt(tempScore) + Integer.parseInt(myScore);
                     object.put(equipo, Integer.toString(scoreTotal));
 
@@ -125,6 +139,7 @@ public class puntosBonus extends Activity implements AdapterView.OnItemSelectedL
 
 
                 } else {
+                    Log.d("Equipos", "Excepcion" + e.getMessage());
                     fail();
                 }
             }
