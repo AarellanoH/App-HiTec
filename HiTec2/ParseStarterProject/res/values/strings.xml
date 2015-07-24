@@ -18,6 +18,7 @@
         <item>INGENIERIA</item>
         <item>HUMANIDADES</item>
         <item>CIT</item>
+        <item>TODOS</item>
     </string-array>
     <string-array name="Estaciones">
         <item>Favor de escoger estación </item>

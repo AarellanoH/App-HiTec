@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <!-- From: file:/C:/Users/Alejandro/Documents/GitHub/App-HiTec/HiTec2/ParseStarterProject/res/values/strings.xml -->
+    <!-- From: file:/C:/Users/GabrielAntonio/Documents/DocumentosAcademicos/App-HiTec/HiTec2/ParseStarterProject/res/values/strings.xml -->
     <eat-comment/>
     <string-array name="Colores">
         <item>Color</item>
@@ -15,6 +15,7 @@
         <item>INGENIERIA</item>
         <item>HUMANIDADES</item>
         <item>CIT</item>
+        <item>TODOS</item>
     </string-array>
     <string-array name="Estaciones">
         <item>Favor de escoger estación </item>
@@ -85,11 +86,11 @@
         <item>45</item>
 
     </string-array>
-    <!-- From: file:/C:/Users/Alejandro/Documents/GitHub/App-HiTec/HiTec2/ParseStarterProject/res/values/dimens.xml -->
+    <!-- From: file:/C:/Users/GabrielAntonio/Documents/DocumentosAcademicos/App-HiTec/HiTec2/ParseStarterProject/res/values/dimens.xml -->
     <eat-comment/>
     <dimen name="activity_horizontal_margin">16dp</dimen>
     <dimen name="activity_vertical_margin">16dp</dimen>
-    <!-- From: file:/C:/Users/Alejandro/Documents/GitHub/App-HiTec/HiTec2/ParseStarterProject/res/values/strings.xml -->
+    <!-- From: file:/C:/Users/GabrielAntonio/Documents/DocumentosAcademicos/App-HiTec/HiTec2/ParseStarterProject/res/values/strings.xml -->
     <eat-comment/>
     <string name="action_settings">Settings</string>
     <string name="app_name">HiTecApp</string>

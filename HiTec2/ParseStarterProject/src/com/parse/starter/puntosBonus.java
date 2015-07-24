@@ -34,9 +34,10 @@ public class puntosBonus extends Activity implements AdapterView.OnItemSelectedL
     EditText textScore;
     int scoreTotal = 0;
 
-    boolean listo = false, defaults=true, error=false;
+    boolean listo = false, defaults=true, error=false, assignAll=false;
     int punct;
     String edificio, color, estacion, score, equipo;
+    int score_CIT, score_PIT, score_ENH,score_EI;
 
     String edificioDefault,colorDefault,scoreDefault;
     @Override
@@ -72,6 +73,7 @@ public class puntosBonus extends Activity implements AdapterView.OnItemSelectedL
     }
     public void onClickSubmit(View v) {
         Button button = (Button) v;
+        error=true;
         ParseUser currentUser = ParseUser.getCurrentUser();
         if (currentUser != null) {
             // do stuff with the user
@@ -91,13 +93,13 @@ public class puntosBonus extends Activity implements AdapterView.OnItemSelectedL
 
         //button.setText(scoreNoValido);
 
-        if(defaults==false)
+        if(defaults==false&&error==false)
             try{
                 guardarScore(edificio,color,score);
             }
             catch (Exception e)
             {
-
+                fail();
             }
 
         else
@@ -108,28 +110,43 @@ public class puntosBonus extends Activity implements AdapterView.OnItemSelectedL
     public void guardarScore(String miEdificio, final String miColor, final String myScore){
         final ParseQuery<ParseObject> query = ParseQuery.getQuery("Puntuacionesv2");
         query.whereEqualTo("Estaciones", estacion);
+        if(miEdificio.equals("TODOS")){
+            assignAll=true;
+            query.whereExists("CIT"+miColor);
+            Log.d("Equipos", "Equipo" + miColor + " Score:" + scoreTotal);
+            query.findInBackground(new FindCallback<ParseObject>() {
+                public void done(List<ParseObject> equipoList, ParseException e) {
+                    if (e == null) {
+                        Log.d("Equipos", "Entramos" );
+                        ParseObject object = equipoList.get(0);
+                        String temp_CIT = object.get("CIT"+miColor).toString();
+                        String temp_EI = object.get("EI"+miColor).toString();
+                        String temp_ENH = object.get("ENH"+miColor).toString();
+                        String temp_PIT = object.get("PIT"+miColor).toString();
+                        try{
+                            punct = Integer.parseInt(temp_CIT);
+                            punct = Integer.parseInt(temp_EI);
+                            punct = Integer.parseInt(temp_ENH);
+                            punct = Integer.parseInt(temp_PIT);
+                        }
+                        catch (Exception exc){
+                            temp_CIT = "0";
+                            temp_EI = "0";
+                            temp_ENH = "0";
+                            temp_PIT = "0";
+                        }
+                        score_CIT = Integer.parseInt(temp_CIT) + Integer.parseInt(myScore);
+                        score_EI = Integer.parseInt(temp_EI) + Integer.parseInt(myScore);
+                        score_ENH = Integer.parseInt(temp_ENH) + Integer.parseInt(myScore);
+                        score_PIT = Integer.parseInt(temp_PIT) + Integer.parseInt(myScore);
+                        object.put("CIT"+miColor, Integer.toString(score_CIT));
+                        object.put("EI"+miColor, Integer.toString(score_EI));
+                        object.put("ENH"+miColor, Integer.toString(score_ENH));
+                        object.put("PIT"+miColor, Integer.toString(score_PIT));
 
-        equipo = miEdificio + miColor;
-        query.whereExists(equipo);
-        Log.d("Equipos", "Equipo" + equipo + " Score:" + score);
-        query.findInBackground(new FindCallback<ParseObject>() {
-            public void done(List<ParseObject> equipoList, ParseException e) {
-                if (e == null) {
-                    ParseObject object = equipoList.get(0);
-                    String tempScore = object.get(equipo).toString();
-                    try{
-                        punct = Integer.parseInt(tempScore);
-                    }
-                    catch (Exception exc){
-                        tempScore = "0";
-                    }
+                        object.saveEventually();
 
-                    scoreTotal = Integer.parseInt(tempScore) + Integer.parseInt(myScore);
-                    object.put(equipo, Integer.toString(scoreTotal));
-
-                    object.saveEventually();
-
-                    success();
+                        success();
                     /*
                     while (count <= 4) {
                         count++;
@@ -138,12 +155,47 @@ public class puntosBonus extends Activity implements AdapterView.OnItemSelectedL
                     */
 
 
-                } else {
-                    Log.d("Equipos", "Excepcion" + e.getMessage());
-                    fail();
+                    } else {
+                        fail();
+                    }
                 }
-            }
-        });
+            });
+        }else {
+            equipo = miEdificio + miColor;
+            query.whereExists(equipo);
+            Log.d("Equipos", "Equipo" + equipo + " Score:" + score);
+            query.findInBackground(new FindCallback<ParseObject>() {
+                public void done(List<ParseObject> equipoList, ParseException e) {
+                    if (e == null) {
+                        ParseObject object = equipoList.get(0);
+                        String tempScore = object.get(equipo).toString();
+                        try {
+                            punct = Integer.parseInt(tempScore);
+                        } catch (Exception exc) {
+                            tempScore = "0";
+                        }
+
+                        scoreTotal = Integer.parseInt(tempScore) + Integer.parseInt(myScore);
+                        object.put(equipo, Integer.toString(scoreTotal));
+
+                        object.saveEventually();
+
+                        success();
+                    /*
+                    while (count <= 4) {
+                        count++;
+                        guardarScore(listaEdificios[count], miColor, myScore);
+                    }
+                    */
+
+
+                    } else {
+                        //Log.d("Equipos", "Excepcion" + e.getMessage());
+                        fail();
+                    }
+                }
+            });
+        }
     }
 
     public void success()
@@ -154,15 +206,24 @@ public class puntosBonus extends Activity implements AdapterView.OnItemSelectedL
             edificio = "HUMANIDADES";
         AlertDialog.Builder alert = new AlertDialog.Builder(this);
         alert.setTitle("Exito");
+        if(assignAll==true){
+            alert.setMessage("Puntuacion para equipos " + color +  " guardada exitosamente. \nBonus dado: " + score + "" +
+                    "\nBonus total CIT: " + score_CIT +
+                    "\nBonus total INGENIERIA: " + score_EI+
+                    "\nBonus total HUMANIDADES: " + score_ENH+
+                    "\nBonus total PIT: " + score_PIT);
+            assignAll=false;
+
+        }else
         alert.setMessage("Puntuacion de equipo " + edificio + " " + color + " guardada exitosamente. \nBonus dado: " + score + "\nBonus total: " + scoreTotal);
         alert.setPositiveButton("OK", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int which) {
-
+                borrarSeleccion();
             }
         });
         alert.show();
-        borrarSeleccion();
+
 
 
     }

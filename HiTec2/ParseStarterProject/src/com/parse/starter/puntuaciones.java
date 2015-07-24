@@ -35,13 +35,13 @@ public class puntuaciones extends Activity implements AdapterView.OnItemSelected
 
     Spinner spinnerEdificio;
     Spinner spinnerColor;
-    boolean listo = false, defaults=true, error=false;
+    boolean listo = false, defaults=true, error=false, assignAll=false;
     int punct;
     String edificio, color, estacion, equipo;
     String edificioDefault,colorDefault,scoreDefault;
     int count = 0;
     String[] listaEdificios = {"CIT","EI","ENH","PIT"};
-    int scoreTermino,scoreParticipacion,scoreCompromiso,scoreTotal;
+    int scoreTermino,scoreParticipacion,scoreCompromiso,scoreTotal,score_CIT,score_PIT,score_EI,score_ENH ;
     boolean terminoDeafult=true, participacionDefault=true,compromisoDefault=true;
 
 
@@ -139,6 +139,15 @@ public class puntuaciones extends Activity implements AdapterView.OnItemSelected
             edificio = "HUMANIDADES";
         AlertDialog.Builder alert = new AlertDialog.Builder(this);
         alert.setTitle("Exito");
+        if(assignAll==true){
+            alert.setMessage("Puntuacion para equipos " + color +  " guardada exitosamente. \nBonus dado: " + scoreTotal + "" +
+                    "\nPuntos totales CIT: " + score_CIT +
+                    "\nPuntos totales INGENIERIA: " + score_EI+
+                    "\nPuntos totales HUMANIDADES: " + score_ENH+
+                    "\nPuntos totales PIT: " + score_PIT);
+            assignAll=false;
+
+        }else
         alert.setMessage("Puntuacion de equipo " + edificio + " " + color + " guardada exitosamente. \nScore: " + scoreTotal);
         alert.setPositiveButton("OK", new DialogInterface.OnClickListener() {
             @Override
@@ -157,21 +166,45 @@ public class puntuaciones extends Activity implements AdapterView.OnItemSelected
     }
 
     public void guardarScore(String miEdificio, final String miColor, final String myScore){
-        final ParseQuery<ParseObject> query = ParseQuery.getQuery("Puntuacionesv2");
+        final ParseQuery query = ParseQuery.getQuery("Puntuacionesv2");
         query.whereEqualTo("Estaciones", estacion);
+        if(miEdificio.equals("TODOS")){
+            assignAll=true;
+            query.whereExists("CIT"+miColor);
+            Log.d("Equipos", "Equipo" + miColor + " Score:" + scoreTotal);
+            query.findInBackground(new FindCallback<ParseObject>() {
+                public void done(List<ParseObject> equipoList, ParseException e) {
+                    if (e == null) {
+                        Log.d("Equipos", "Entramos" );
+                        ParseObject object = equipoList.get(0);
+                        String temp_CIT = object.get("CIT"+miColor).toString();
+                        String temp_EI = object.get("EI"+miColor).toString();
+                        String temp_ENH = object.get("ENH"+miColor).toString();
+                        String temp_PIT = object.get("PIT"+miColor).toString();
+                        try{
+                            punct = Integer.parseInt(temp_CIT);
+                            punct = Integer.parseInt(temp_EI);
+                            punct = Integer.parseInt(temp_ENH);
+                            punct = Integer.parseInt(temp_PIT);
+                        }
+                        catch (Exception exc){
+                            temp_CIT = "0";
+                            temp_EI = "0";
+                            temp_ENH = "0";
+                            temp_PIT = "0";
+                        }
+                        score_CIT = Integer.parseInt(temp_CIT) + Integer.parseInt(myScore);
+                        score_EI = Integer.parseInt(temp_EI) + Integer.parseInt(myScore);
+                        score_ENH = Integer.parseInt(temp_ENH) + Integer.parseInt(myScore);
+                        score_PIT = Integer.parseInt(temp_PIT) + Integer.parseInt(myScore);
+                        object.put("CIT"+miColor, Integer.toString(score_CIT));
+                        object.put("EI"+miColor, Integer.toString(score_EI));
+                        object.put("ENH"+miColor, Integer.toString(score_ENH));
+                        object.put("PIT"+miColor, Integer.toString(score_PIT));
 
-        equipo = miEdificio + miColor;
-        query.whereExists(equipo);
-        Log.d("Equipos", "Equipo" + equipo + " Score:" + scoreTotal);
-        query.findInBackground(new FindCallback<ParseObject>() {
-            public void done(List<ParseObject> equipoList, ParseException e) {
-                if (e == null) {
-                    ParseObject object = equipoList.get(0);
-                    object.put(equipo, myScore);
+                        object.saveEventually();
 
-                    object.saveEventually();
-
-                    success();
+                        success();
                     /*
                     while (count <= 4) {
                         count++;
@@ -180,11 +213,38 @@ public class puntuaciones extends Activity implements AdapterView.OnItemSelected
                     */
 
 
-                } else {
-                    fail();
+                    } else {
+                        fail();
+                    }
                 }
-            }
-        });
+            });
+        }else {
+            equipo = miEdificio + miColor;
+            query.whereExists(equipo);
+            Log.d("Equipos", "Equipo" + equipo + " Score:" + scoreTotal);
+            query.findInBackground(new FindCallback<ParseObject>() {
+                public void done(List<ParseObject> equipoList, ParseException e) {
+                    if (e == null) {
+                        ParseObject object = equipoList.get(0);
+                        object.put(equipo, myScore);
+
+                        object.saveEventually();
+
+                        success();
+                    /*
+                    while (count <= 4) {
+                        count++;
+                        guardarScore(listaEdificios[count], miColor, myScore);
+                    }
+                    */
+
+
+                    } else {
+                        fail();
+                    }
+                }
+            });
+        }
     }
 
     public void onRadioButtonClicked(View view) {
@@ -261,6 +321,9 @@ public class puntuaciones extends Activity implements AdapterView.OnItemSelected
         groupTermino.clearCheck();
         groupParticipacion.clearCheck();
         groupCompromiso.clearCheck();
+        participacionDefault=true;
+        compromisoDefault=true;
+        terminoDeafult=true;
 
         spinnerColor.setSelection(0);
         spinnerEdificio.setSelection(0);

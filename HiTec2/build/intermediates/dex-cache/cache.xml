@@ -2,25 +2,25 @@
 <items version="2" >
 
     <item
-        jar="C:\Users\Alejandro\Documents\GitHub\App-HiTec\HiTec2\ParseStarterProject\libs\ParseCrashReporting-1.9.2.jar"
-        jumboMode="false"
-        revision="21.1.2"
-        sha1="83f3b1e397f1cc3f05cb9db078d9e364b5f5e218">
-        <dex dex="C:\Users\Alejandro\Documents\GitHub\App-HiTec\HiTec2\ParseStarterProject\build\intermediates\pre-dexed\debug\ParseCrashReporting-1.9.2-5f7e776aac1f9692ed573bfea894cab9cf1e20cb.jar" />
-    </item>
-    <item
-        jar="C:\Users\Alejandro\.gradle\caches\modules-2\files-2.1\com.parse.bolts\bolts-android\1.2.0\6ee2953ccf51ce72b6d548c30c4633b99eb4f9dd\bolts-android-1.2.0.jar"
-        jumboMode="false"
-        revision="21.1.2"
-        sha1="6ee2953ccf51ce72b6d548c30c4633b99eb4f9dd">
-        <dex dex="C:\Users\Alejandro\Documents\GitHub\App-HiTec\HiTec2\ParseStarterProject\build\intermediates\pre-dexed\debug\bolts-android-1.2.0-fef1f60c2f10b737358821f00b9fb914f85b1e4b.jar" />
-    </item>
-    <item
-        jar="C:\Users\Alejandro\Documents\GitHub\App-HiTec\HiTec2\ParseStarterProject\libs\Parse-1.9.2.jar"
+        jar="C:\Users\GabrielAntonio\Documents\DocumentosAcademicos\App-HiTec\HiTec2\ParseStarterProject\libs\Parse-1.9.2.jar"
         jumboMode="false"
         revision="21.1.2"
         sha1="fe739334780fe321141e62720822c2d456061899">
-        <dex dex="C:\Users\Alejandro\Documents\GitHub\App-HiTec\HiTec2\ParseStarterProject\build\intermediates\pre-dexed\debug\Parse-1.9.2-bcb94e838184c2bd91df3ee01210cd36cbd247e2.jar" />
+        <dex dex="C:\Users\GabrielAntonio\Documents\DocumentosAcademicos\App-HiTec\HiTec2\ParseStarterProject\build\intermediates\pre-dexed\debug\Parse-1.9.2-7a3eebc3184fdf709e7cd17ed87efc7cab540c1a.jar" />
+    </item>
+    <item
+        jar="C:\Users\GabrielAntonio\.gradle\caches\modules-2\files-2.1\com.parse.bolts\bolts-android\1.2.0\6ee2953ccf51ce72b6d548c30c4633b99eb4f9dd\bolts-android-1.2.0.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="6ee2953ccf51ce72b6d548c30c4633b99eb4f9dd">
+        <dex dex="C:\Users\GabrielAntonio\Documents\DocumentosAcademicos\App-HiTec\HiTec2\ParseStarterProject\build\intermediates\pre-dexed\debug\bolts-android-1.2.0-df830a76364eafb8deac462ecc0b12e90e74bcf3.jar" />
+    </item>
+    <item
+        jar="C:\Users\GabrielAntonio\Documents\DocumentosAcademicos\App-HiTec\HiTec2\ParseStarterProject\libs\ParseCrashReporting-1.9.2.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="83f3b1e397f1cc3f05cb9db078d9e364b5f5e218">
+        <dex dex="C:\Users\GabrielAntonio\Documents\DocumentosAcademicos\App-HiTec\HiTec2\ParseStarterProject\build\intermediates\pre-dexed\debug\ParseCrashReporting-1.9.2-2ce623f4e6af90651b55a336c7cf90b0393d81b7.jar" />
     </item>
 
 </items>
